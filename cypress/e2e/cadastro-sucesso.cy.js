@@ -3,10 +3,13 @@ describe('Página de cadastro', () => {
         cy.visit('/');
     })
 
+    context('Verifica redirecionamento da página', () => {{
         it('Clica no link "Cadastra-se" e redireciona para a página de cadastro da clínica', () => {
             cy.get('[href="/cadastro"]').click();
             cy.location('pathname').should('equal', '/cadastro');
         })
+    }})
+
 
     context('Primeira parte da sessão de cadastro', () => {
 
@@ -22,7 +25,9 @@ describe('Página de cadastro', () => {
             cy.get('.sc-laZRCg').should('exist').should('be.visible');
 
         })
+    })
 
+    context('Cadastra uma clínica', () => {
         it('Cadastra uma clínica', () => {
             cy.get('[href="/cadastro"]').click();
             cy.get('[data-test="inputNome"]').type('Catarina P');
@@ -39,8 +44,9 @@ describe('Página de cadastro', () => {
             cy.get('[data-test="inputEstado"]').type('BA');
             cy.contains('Cadastrar').click();
             cy.location('pathname').should('equal', '/login');
-
+    
         })
+
     })
 })
 
