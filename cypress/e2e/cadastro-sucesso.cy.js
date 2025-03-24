@@ -27,7 +27,7 @@ describe('Página de cadastro', () => {
         })
     })
 
-    context('Cadastra uma clínica', () => {
+    context('Sessão de cadastro completa', () => {
         it('Cadastra uma clínica', () => {
             cy.get('[href="/cadastro"]').click();
             cy.get('[data-test="inputNome"]').type('Catarina P');
