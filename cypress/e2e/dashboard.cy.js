@@ -19,6 +19,7 @@ describe('Usuário logado na página de dashboard', () => {
 
     })
 
+    // trecho que valida os checkboxes
     context('Modal de cadastro de especialista', () => {
         it('Verifica se o checkbox "Atende por plano?" está desmarcado', () => {
             cy.visit('/dashboard')
