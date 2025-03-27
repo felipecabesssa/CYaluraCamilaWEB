@@ -1,3 +1,7 @@
+- rodar projeto cypress - npx cypress open
+- rodar backend - cd server (entrar na pasta server) e - npm start
+- rodar frontend - cd web (entrar na pasta web) e - npm start
+
 - Ctrl+; Comenta ou descomenta trechos de código
 - Rodar teste em outro navegador (firefox): npx cypress run --browser firefox
 
