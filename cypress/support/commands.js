@@ -28,19 +28,19 @@ Cypress.Commands.add('cadastraEspecialista', (nome, email, senha, especialidade,
 
 })
 
-// Cypress.Commands.add('loginApi', (email, senha) => {
-//     cy.request({
-//         method: 'POST',
-//         url: Cypress.env('api_login'),
-//         body: {
-//             email: email,
-//             senha: senha
-//         }
-//     }).then(response => {
-//         expect(response.status).to.eq(200);
-//         expect(response.body.auth).to.be.true;
-//         expect(response.body.rota).to.eq('/clinica');
-//         expect(response.body.token).to.exist;
-//         cy.wrap(response.body.token).as('token');
-//     })
-// })
+Cypress.Commands.add('loginApi', (email, senha) => {
+    cy.request({
+        method: 'POST',
+        url: Cypress.env('api_login'),
+        body: {
+            email: email,
+            senha: senha
+        }
+    }).then(response => {
+        expect(response.status).to.eq(200);
+        expect(response.body.auth).to.be.true;
+        expect(response.body.rota).to.eq('/clinica');
+        expect(response.body.token).to.exist;
+        cy.wrap(response.body.token).as('token');
+    })
+})
