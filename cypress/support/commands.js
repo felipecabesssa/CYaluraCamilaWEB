@@ -39,7 +39,7 @@ Cypress.Commands.add('loginApi', (email, senha) => {
     }).then(response => {
         expect(response.status).to.eq(200);
         expect(response.body.auth).to.be.true;
-        expect(response.body.rota).to.eq('/clinica');
+        expect(response.body.rota).to.eq('/dashboard');
         expect(response.body.token).to.exist;
         cy.wrap(response.body.token).as('token');
     })
